@@ -10,7 +10,6 @@ return new class extends Migration
     {
         Schema::create('minimal_averages', function (Blueprint $table) {
             $table->id();
-            $table->uuid()->unique();
             $table->unsignedBigInteger('cycle_id');
             $table->unsignedBigInteger('academic_year_id');
             $table->float('minimal_average')->default(12.0);
