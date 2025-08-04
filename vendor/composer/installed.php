@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'cap/laravel-core-models',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '798c5975932f08285795ba3d5fd4912a85e1f079',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -20,9 +20,9 @@
             'dev_requirement' => false,
         ),
         'cap/laravel-core-models' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '798c5975932f08285795ba3d5fd4912a85e1f079',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

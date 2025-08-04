@@ -45,4 +45,9 @@ class AcademicYear extends Model
     {
         return $this->hasMany(DefenseSubmissionPeriod::class);
     }
+
+    public function minimalAverage()
+    {
+        return $this->belongsTo(AcademicYear::class);
+    }
 }

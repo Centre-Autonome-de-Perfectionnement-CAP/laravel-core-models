@@ -4,12 +4,13 @@ namespace Cap\LaravelCoreModels\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Classe extends Model
+class Student extends Authenticatable
 {
     use HasFactory;
 
-    protected $fillable = ['department_id', 'level', 'semester1_credits', 'semester2_credits', 'academic_year_id'];
+    protected $fillable = ['student_id_number', 'password'];
 
     protected static function boot()
     {
@@ -21,17 +22,9 @@ class Classe extends Model
             }
         });
     }
-    public function department()
+    
+    public function studentPendingStudent()
     {
-        return $this->belongsTo(Department::class);
-    }
-    public function academicYear()
-    {
-        return $this->belongsTo(AcademicYear::class);
-    }
-
-    public function programs()
-    {
-        return $this->hasMany(Program::class);
+        return $this->hasOne(StudentPendingStudent::class);
     }
 }
