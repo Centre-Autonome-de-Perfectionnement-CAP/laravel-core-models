@@ -44,6 +44,6 @@ class CourseProfessor extends Model
 
     public function professor()
     {
-        return $this->belongsTo(Professor::class);
+        return $this->belongsTo(App\Models\Professor::class);
     }
 }

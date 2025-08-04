@@ -37,7 +37,7 @@ class Course extends Model
 
     public function professors()
     {
-        return $this->belongsToMany(Professor::class, 'matiere_professeur')
+        return $this->belongsToMany(App\Models\Professor::class, 'matiere_professeur')
                     ->withPivot('principal')
                     ->withTimestamps();
     }
