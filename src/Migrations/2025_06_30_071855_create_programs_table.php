@@ -18,9 +18,11 @@ return new class extends Migration
                 $table->foreignId('classe_id')->constrained()->onDelete('cascade');
                 $table->foreignId('course_professor_id')->constrained('course_professors')->onDelete('cascade');
                 $table->string('semester');
-                $table->integer('credit');
-                $table->float('pond_session_normale');
-                $table->float('pond_session_rattrapage');
+                $table->integer('hourly_mass');
+                $table->foreignId('ue_id')->nullable()->constrained()->onDelete('set null');
+                $table->string('code');
+                $table->json('pond_session_normale')->nullable();
+                $table->json('pond_session_rattrapage')->nullable();
                 $table->timestamps();
             });
         }
