@@ -1,6 +1,6 @@
 {
-    "name": "cap/laravel-core-models",
-    "description": "Core Laravels models and migrations used across multiple projects",
+    "name": "cap-epac/laravel-core-models",
+    "description": "Core Laravel models, migrations, middlewares, and common dependencies used across multiple projects",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -20,7 +20,11 @@
         "illuminate/support": "^12.0",
         "illuminate/events": "^12.0",
         "illuminate/auth": "^12.0",
-        "illuminate/notifications": "^12.0"
+        "illuminate/notifications": "^12.0",
+        "yajra/laravel-datatables": "^12.0",
+        "phpoffice/phpspreadsheet": "^2.0",
+        "phpoffice/phpword": "^1.3",
+        "barryvdh/laravel-dompdf": "^3.0"
     },
     "extra": {
         "laravel": {
@@ -28,5 +32,9 @@
             "Cap\\LaravelCoreModels\\LaravelCoreModelsServiceProvider"
             ]
         }
+    },
+    "repository":{
+        "type":"composer",
+        "url": "https://packagist.org"
     }
 }
