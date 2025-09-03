@@ -16,10 +16,6 @@ return new class extends Migration
                 $table->id();
                 $table->uuid()->unique();
                 $table->string('name');
-                $table->string('code')->unique();
-                $table->integer('hourly_mass');
-                $table->foreignId('ue_id')->nullable()->constrained()->onDelete('set null');
-                $table->integer('credits');
                 $table->timestamps();
             });
         }

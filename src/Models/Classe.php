@@ -29,6 +29,9 @@ class Classe extends Model
     {
         return $this->belongsTo(AcademicYear::class);
     }
+
+    public function programs()
+    {
+        return $this->hasMany(Program::class);
+    }
 }
-
-

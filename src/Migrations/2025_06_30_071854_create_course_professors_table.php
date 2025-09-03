@@ -18,7 +18,7 @@ return new class extends Migration
                 $table->foreignId('course_id')->constrained()->onDelete('cascade');
                 $table->foreignId('professor_id')->constrained('professors')->onDelete('cascade');
                 $table->boolean('principal')->default(false);
-                $table->unique(['course_id', 'principal']);
+                // $table->unique(['course_id', 'principal']);
                 $table->timestamps();
             });
         }
